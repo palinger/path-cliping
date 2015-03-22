@@ -96,11 +96,11 @@ textarea {
    ========================================================================== */
 
 .wrapper, .wrapper1 {
-    width: 600px;
+    max-width: 800px;
     height: 400px;
     position: relative;
     background-color: silver;
-    margin: 0px auto;
+    margin: 0px auto 100px;
 }
 .wrapper1 {
     
@@ -207,6 +207,53 @@ ul {
     text-transform: uppercase;
 }
 
+.triangles {
+  margin: 0px auto;
+  width: 200px;
+  height: 200px;
+  background-color: darkgrey;
+  top: 100px;
+  position: relative;
+  -webkit-animation: myanim 5s infinite; 
+          animation: myanim 5s infinite; 
+-webkit-clip-path: polygon(50% 0, 0 50%, 50% 50%);
+clip-path: polygon(50% 0, 0 50%, 50% 50%);          
+}
+
+@-webkit-keyframes myanim {
+  0%   {-webkit-clip-path: polygon(50% 0, 0 50%, 50% 50%);
+clip-path: polygon(50% 0, 0 50%, 50% 50%);     }
+  25%  {-webkit-clip-path: polygon(0 50%, 50% 100%, 50% 50%);
+clip-path: polygon(0 50%, 50% 100%, 50% 50%);}
+  50% {-webkit-clip-path: polygon(50% 100%, 100% 50%, 50% 50%);
+clip-path: polygon(50% 100%, 100% 50%, 50% 50%);}
+  75% { -webkit-clip-path: polygon(100% 50%, 50% 0, 50% 50%);
+clip-path: polygon(100% 50%, 50% 0, 50% 50%); }
+  100%   {-webkit-clip-path: polygon(50% 0, 0 50%, 50% 50%);
+clip-path: polygon(50% 0, 0 50%, 50% 50%);}
+}
+
+.triangles1 {
+  margin: 0px auto;
+  width: 200px;
+  height: 200px;
+  background-color: darkgrey;
+  top: 100px;
+  position: relative;
+  -webkit-animation: myanim2 5s infinite; 
+          animation: myanim2 5s infinite;
+-webkit-clip-path: polygon(25% 0, 0 75%, 100% 75%, 75% 100%, 75% 0, 0 25%);
+clip-path: polygon(25% 0, 0 75%, 100% 75%, 75% 100%, 75% 0, 0 25%);          
+}
+
+@-webkit-keyframes myanim2 {
+  0%   { -webkit-clip-path: polygon(25% 0, 0 75%, 100% 75%, 75% 100%, 75% 0, 0 25%);
+clip-path: polygon(25% 0, 0 75%, 100% 75%, 75% 100%, 75% 0, 0 25%);}
+  50%   { -webkit-clip-path: polygon(25% 100%, 75% 0, 75% 100%, 25% 0, 0 75%, 0 25%);
+clip-path: polygon(25% 100%, 75% 0, 75% 100%, 25% 0, 0 75%, 0 25%);}
+  100%   { -webkit-clip-path: polygon(25% 0, 0 75%, 100% 75%, 75% 100%, 75% 0, 0 25%);
+clip-path: polygon(25% 0, 0 75%, 100% 75%, 75% 100%, 75% 0, 0 25%);}
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
